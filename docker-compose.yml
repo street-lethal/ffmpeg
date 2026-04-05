@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    working_dir: /app
+    environment:
+      LANG: C.UTF-8
+    env_file:
+      - .env
+    user: "${USER_ID}:${GROUP_ID}"
+    volumes:
+      - ./wav:/app/wav
+      - ./flac:/app/flac
+      - ./scripts/in_docker:/app/scripts:ro
+      - /etc/group:/etc/group:ro
+    cap_drop:
+      - ALL
