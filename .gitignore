@@ -1,3 +1,4 @@
 .env
 wav/*
 flac/*
+mp3/*
