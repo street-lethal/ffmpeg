@@ -10,6 +10,7 @@ services:
     volumes:
       - ./wav:/app/wav
       - ./flac:/app/flac
+      - ./mp3:/app/mp3
       - ./scripts/in_docker:/app/scripts:ro
       - /etc/group:/etc/group:ro
     cap_drop:
